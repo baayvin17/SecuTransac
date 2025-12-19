@@ -1,0 +1,4 @@
+- recherche metier
+- recherche d'autre type de transaction et mettre les trasancyion riques 
+- recherche des pleins de categories d'autes merchant et fait les risques 
+- emodji

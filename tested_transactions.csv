@@ -1,0 +1,8 @@
+amount,hour_of_day,day_of_week,country,country_risk,transaction_type,transaction_type_encoded,merchant_category,merchant_category_encoded,fraud_probability
+250.0,14,0,FR,0,Paiement,0,Restaurant,0,13.18642944097519
+250.0,14,0,US,0,Paiement,0,Restaurant,0,13.18642944097519
+250.0,14,0,CN,1,Paiement,0,Restaurant,0,74.52038526535034
+31.0,14,0,CN,1,Paiement,0,Restaurant,0,74.99353289604187
+31.0,14,3,CN,1,Paiement,0,Technologie,1,33.41183662414551
+31.0,1,3,FR,0,Paiement,0,Divertissement,2,80.46372532844543
+5.0,10,5,CN,1,Paiement,0,Commerce de détail,4,21.81653529405594
