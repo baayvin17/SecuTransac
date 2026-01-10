@@ -1,9 +1,8 @@
-# app.py — SécuTransac avec MLflow + persistance CSV
-
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import mlflow.pyfunc
+import mlflow.sklearn
+import joblib
 import os
 from pathlib import Path
 
@@ -21,9 +20,14 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     run_id = Path("latest_run_id.txt").read_text(encoding="utf-8").strip()
-    return mlflow.pyfunc.load_model(
+    return mlflow.sklearn.load_model(
         model_uri=f"runs:/{run_id}/model"
     )
+
+@st.cache_resource
+def load_scaler():
+    return joblib.load("scaler.pkl")
+
 
 model = load_model()
 
@@ -32,6 +36,16 @@ model = load_model()
 # ===============================
 countries = ["FR", "US", "DE", "ES", "IT", "RU", "CN", "NG", "UA", "BR"]
 HIGH_RISK_COUNTRIES = ["RU", "CN", "NG", "UA", "BR"]
+
+FEATURES = [
+    "amount",
+    "hour_of_day",
+    "day_of_week",
+    "country_risk",
+    "transaction_type_encoded",
+    "merchant_category_encoded",
+]
+
 
 transaction_types = {
     "Paiement": 0,
@@ -119,7 +133,9 @@ with tabs[0]:
             "merchant_category_encoded": merchant_encoded
         }])
 
-        fraud_probability = model.predict(input_df)[0] * 100
+        scaler = load_scaler()
+        X_scaled = scaler.transform(input_df[FEATURES])
+        fraud_probability = float(model.predict_proba(X_scaled)[:, 1][0]) * 100
 
         st.subheader("Résultat")
 
