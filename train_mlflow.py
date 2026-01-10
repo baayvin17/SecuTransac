@@ -5,6 +5,7 @@
 
 import pandas as pd
 import numpy as np
+from pathlib import Path
 import mlflow
 import mlflow.sklearn
 
@@ -18,6 +19,14 @@ import joblib
 # ===============================
 # CONFIGURATION MLFLOW
 # ===============================
+
+PROJECT_DIR = Path(__file__).resolve().parent
+MLRUNS_DIR = PROJECT_DIR / "mlruns"
+MLRUNS_DIR.mkdir(parents=True, exist_ok=True)
+
+mlflow.set_tracking_uri(MLRUNS_DIR.as_uri())
+mlflow.set_registry_uri(MLRUNS_DIR.as_uri())
+
 mlflow.set_experiment("SecuTransac_Fraud_Detection")
 
 # ===============================
@@ -151,10 +160,17 @@ with mlflow.start_run():
     mlflow.log_metric("roc_auc", roc_auc)
 
     mlflow.sklearn.log_model(
-    sk_model=model,
-    artifact_path="model",
-    registered_model_name="SecuTransac_Fraud_Model"
-)
+        sk_model=model,
+        name="model",
+        registered_model_name="SecuTransac_Fraud_Model"
+    )
+
+    # ===============================
+    # FIX "PLUS PROPRE" : persister le latest_run_id pour Streamlit
+    # ===============================
+    run_id = mlflow.active_run().info.run_id
+    (PROJECT_DIR / "latest_run_id.txt").write_text(run_id, encoding="utf-8")
+    print("MLFLOW_RUN_ID:", run_id)
 
     # ===============================
     # SAUVEGARDE LOCALE (STREAMLIT)

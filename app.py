@@ -5,6 +5,7 @@ import pandas as pd
 import plotly.express as px
 import mlflow.pyfunc
 import os
+from pathlib import Path
 
 # ===============================
 # CONFIGURATION PAGE
@@ -19,8 +20,9 @@ st.set_page_config(
 # ===============================
 @st.cache_resource
 def load_model():
+    run_id = Path("latest_run_id.txt").read_text(encoding="utf-8").strip()
     return mlflow.pyfunc.load_model(
-        model_uri="models:/SecuTransac_Fraud_Model@prod"
+        model_uri=f"runs:/{run_id}/model"
     )
 
 model = load_model()
@@ -81,7 +83,7 @@ with tabs[0]:
     amount = st.number_input(
         "Montant (€)",
         min_value=1.0,
-        max_value=200_000.0,  # 🚗 voiture, luxe, etc.
+        max_value=200_000.0,
         value=500.0,
         step=50.0
     )
