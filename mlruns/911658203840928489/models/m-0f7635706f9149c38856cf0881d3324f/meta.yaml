@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/User/python/devoirs/SecuTransac/mlruns/911658203840928489/models/m-0f7635706f9149c38856cf0881d3324f/artifacts
+creation_timestamp: 1768047836715
+experiment_id: '911658203840928489'
+last_updated_timestamp: 1768047843343
+model_id: m-0f7635706f9149c38856cf0881d3324f
+model_type: null
+name: model
+source_run_id: baaa366bf3494399a5f8b33adb6879eb
+status: 2
+status_message: null

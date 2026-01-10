@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/User/python/devoirs/SecuTransac/mlruns/911658203840928489/models/m-b2acc0b0f5b045b7b9639fa08fa51ecf/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+mlflow_version: 3.8.1
+model_id: m-b2acc0b0f5b045b7b9639fa08fa51ecf
+model_size_bytes: 433022
+model_uuid: m-b2acc0b0f5b045b7b9639fa08fa51ecf
+prompts: null
+run_id: e9fbbf9a5dab4f26827af9d19720f3eb
+utc_time_created: '2026-01-10 11:52:53.570643'
