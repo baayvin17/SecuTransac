@@ -6,3 +6,16 @@ amount,hour_of_day,day_of_week,country,country_risk,transaction_type,transaction
 31.0,14,3,CN,1,Paiement,0,Technologie,1,33.41183662414551
 31.0,1,3,FR,0,Paiement,0,Divertissement,2,80.46372532844543
 5.0,10,5,CN,1,Paiement,0,Commerce de détail,4,21.81653529405594
+278988.0,3,6,FR,0,Virement,2,Technologie,1,85.07927656173706
+278988.0,3,6,RU,1,Virement,2,Technologie,1,94.39234733581543
+278988.0,3,6,CN,1,Virement,2,Technologie,1,94.39234733581543
+278988.0,3,2,CN,1,Virement,2,Technologie,1,94.52940821647644
+278988.0,14,2,CN,1,Virement,2,Technologie,1,77.7958631515503
+278988.0,14,2,CN,1,Virement,2,Technologie,1,77.7958631515503
+278988.0,14,6,CN,1,Virement,2,Technologie,1,77.34004855155945
+278988.0,14,0,CN,1,Virement,2,Technologie,1,70.69138288497925
+278988.0,14,5,CN,1,Virement,2,Technologie,1,77.34004855155945
+278988.0,14,6,CN,1,Virement,2,Technologie,1,77.34004855155945
+1000000.0,14,6,CN,1,Virement,2,Technologie,1,77.34004855155945
+100000.0,14,6,CN,1,Virement,2,Technologie,1,77.34004855155945
+10000.0,14,6,CN,1,Virement,2,Technologie,1,77.34004855155945

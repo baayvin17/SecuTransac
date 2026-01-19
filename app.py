@@ -74,7 +74,7 @@ tabs = st.tabs(["Tester une transaction", "Dashboard dynamique"])
 with tabs[0]:
     st.header("Tester une transaction")
     
-    amount = st.number_input("Montant (€)", min_value=1.0, max_value=10000.0, value=250.0, step=10.0)
+    amount = st.number_input("Montant (€)", min_value=1.0, max_value=1000000.0, value=250.0, step=10.0)
     hour_of_day = st.slider("Heure", 0, 23, 14)
     day_of_week = st.selectbox("Jour de la semaine", 
                                options=[("Lundi",0),("Mardi",1),("Mercredi",2),("Jeudi",3),
