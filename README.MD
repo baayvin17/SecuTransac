@@ -1,6 +1,8 @@
 # SecuTransac
 
-Bienvenue dans **SecuTransac**, votre assistant de détection de fraude bancaire propulsé par l'intelligence artificielle.
+**LES DONNEES DU DATASET ONT ETE GENEREES MANUELLEMENT VIA UN SCRIPT C EST LA RAISON POUR LAQUELLE LE DATASET EST PRESENT**
+
+Bienvenue dans **SecuTransac**, votre assistant de détection de fraude bancaire propulsé par l'intelligence artificielle. 
 
 ## Qu'est-ce que c'est ?
 
