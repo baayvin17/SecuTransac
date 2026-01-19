@@ -1,0 +1,15 @@
+creation_timestamp: 1768045979769
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1768045979769
+model_id: m-b2acc0b0f5b045b7b9639fa08fa51ecf
+name: SecuTransac_Fraud_Model
+run_id: e9fbbf9a5dab4f26827af9d19720f3eb
+run_link: null
+source: models:/m-b2acc0b0f5b045b7b9639fa08fa51ecf
+status: READY
+status_message: null
+storage_location: file:///C:/Users/User/python/devoirs/SecuTransac/mlruns/911658203840928489/models/m-b2acc0b0f5b045b7b9639fa08fa51ecf/artifacts
+user_id: null
+version: 4

@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+.env
+mlruns/
+models/
+data/tested_transactions.csv
+*.pkl
+*.db

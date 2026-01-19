@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/User/python/devoirs/SecuTransac/mlruns/911658203840928489/7cb72f998cc24642a729c7871e2c9a2d/artifacts
+end_time: 1768046274217
+entry_point_name: ''
+experiment_id: '911658203840928489'
+lifecycle_stage: active
+run_id: 7cb72f998cc24642a729c7871e2c9a2d
+run_name: rare-frog-502
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1768046266441
+status: 3
+tags: []
+user_id: User
