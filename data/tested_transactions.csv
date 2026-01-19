@@ -38,3 +38,4 @@ amount,hour_of_day,day_of_week,country,country_risk,transaction_type,transaction
 13000.0,3,6,NG,1,Paiement,0,Commerce de détail,4,92.55854487419128
 23876.0,14,3,FR,0,Virement,2,Divertissement,2,1.0067826136946678
 23876.0,5,3,FR,0,Virement,2,Divertissement,2,54.28568720817566
+87.0,21,3,FR,0,Paiement,0,Restaurant,0,0.004077716948813759
